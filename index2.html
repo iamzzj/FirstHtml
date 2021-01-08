@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../FirstHtml/js/vue.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="app">
+    <div v-if="count >0">
+        count大于0： {{count}}
+    </div>
+    <div v-else-if="count < 0 && count > -5">
+        count小于0大于-5： {{count}}
+    </div>
+    <div v-else>
+        count： {{count}}
+    </div>
+    <div v-show="count == -1">show :{{ count }}</div>
+    {{ msg }}
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            msg: 'hello vue!',
+            count: 0
+        }
+    })
+</script>
+</body>
+</html>

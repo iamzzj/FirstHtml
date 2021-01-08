@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue 2</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app-2" v-bind:title="message">
+    鼠标悬停几秒钟查看此处动态绑定的提示信息！
+    <p><span>some text.</span>some other text.</p>
+</div>
+<script>
+    new Vue({
+        el: '#app-2',
+        data: {
+            message: '页面加载于' + new Date().toLocaleString()
+        }
+    })
+</script>
+
+</body>

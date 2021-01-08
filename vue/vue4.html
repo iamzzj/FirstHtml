@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue 4</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app-4">
+    <ol>
+        <li v-for="todo in todos">
+            {{ todo.text }} and {{ todo.message}}
+        </li>
+    </ol>
+</div>
+<script>
+    var app4 = new Vue({
+        el: '#app-4',
+        data: {
+            todos: [
+                {text: 'text 1', message: 1},
+                {text: 'text 2', message: 2},
+                {text: 'text 3', message: 3},
+                {text: 'text 4', message: 4},
+                {text: 'text 5', message: 5}
+            ]
+        }
+    })
+</script>
+</body>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../FirstHtml/js/vue.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="app">
+    {{ msg }}
+    <div v-for="item in list">
+        <div v-if="item.age > 29"
+             :class="['active','add',{'another': item.age < 30}]"
+             :style="styleMsg">
+            if {{ item.name }}
+        </div>
+        <div v-else>
+            else {{ item.age }}
+        </div>
+        <div v-show="item.age > 29">
+            show {{ item.name }}
+        </div>
+        </div>
+</div>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            msg: 'hello vue',
+            styleMsg: {
+                color: 'red',
+                textShadow: '0 0 5px green'
+            },
+            list: [{
+                name: 'xiaoming',
+                age: 30
+            }, {
+                name: "xiaohua",
+                age: 23
+            }]
+        }
+    })
+</script>
+
+</body>
+</html>

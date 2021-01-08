@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>test2</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+<div id="example">
+    <p>this is message: {{message}}</p>
+    <p>message computed: {{reversedMessage}}</p>
+</div>
+<script>
+    const example = new Vue({
+        el: '#example',
+        data: {
+            message: 'Hello World'
+        },
+        computed: {
+            reversedMessage: function () {
+                return this.message.split('').reverse().join('');
+            }
+        }
+    })
+</script>
+</body>
