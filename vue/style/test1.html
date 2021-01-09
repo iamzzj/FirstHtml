@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>test1</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+<div id="div1" v-bind:style=" {color: activeColor, fontSize: fontSize + 'px' }">Hello World</div>
+<script>
+    var div1 = new Vue({
+        el: '#div1',
+        data: {
+            activeColor: 'red',
+            fontSize: 30
+        }
+    })
+</script>
+</body>
