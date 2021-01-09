@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test3</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+<div id="div3">
+    <div>input is {{ input }}</div>
+    <template v-if="loginType === 'username'">
+        <label>Username</label>
+        <input v-model="input" placeholder="Enter your username">
+    </template>
+    <template v-else>
+        <label>Email</label>
+        <input placeholder="Enter your email address">
+    </template>
+    <p>
+        <button v-on:click="changeLoginType">Change Login Type</button>
+    </p>
+</div>
+<script>
+    const div3 = new Vue({
+        el: '#div3',
+        data: {
+            loginType: 'username',
+            input: ''
+        },
+        methods: {
+            changeLoginType: function () {
+                if (this.loginType === 'username') {
+                    this.loginType = 'email'
+                } else {
+                    this.loginType = 'username'
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>
