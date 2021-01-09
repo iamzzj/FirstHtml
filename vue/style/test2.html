@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test2</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+<div id="div2" v-bind:style="styleObject">Hello World</div>
+<script>
+    const div2 = new Vue({
+        el: '#div2',
+        data: {
+            styleObject: {
+                color: 'red',
+                fontSize: '13px'
+            }
+        }
+    })
+</script>
+</body>
+</html>
