@@ -5,6 +5,16 @@
     <script src="../../js/vue.js"></script>
 </head>
 <body>
-
+<div id="div1" class="static"
+        v-bind:class="{ active: isActive, 'text-danger': hasError }"></div>
+<script>
+    var div1 = new Vue({
+        el: '#div1',
+        data:{
+            isActive: true,
+            hasError: true
+        }
+    })
+</script>
 
 </body>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>test4</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+    <my-component id="id4" class="baz boo"
+    v-bind:class="{ active: isActive }"></my-component>
+<script>
+    Vue.component('my-component', {
+        template: '<p class="foo bar"></p>'
+    })
+    const id4 = new Vue({
+        el: '#id4',
+        data: {
+            isActive: true
+        }
+    })
+</script>
+</body>
