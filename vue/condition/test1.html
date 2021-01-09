@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test1</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+<div id="div1">
+    <h1 v-if="awesome">Vue is awesome!</h1>
+    <h1 v-else>Oh no</h1>
+</div>
+<script>
+    const div1 = new Vue({
+        el: '#div1',
+        data: {
+            awesome: true
+        }
+    })
+</script>
+</body>
+</html>

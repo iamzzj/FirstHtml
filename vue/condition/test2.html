@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test2</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+<div id="div2">
+    <div v-if="type === 'A'">
+        A
+    </div>
+    <div v-else-if="type === 'B'">
+        B
+    </div>
+    <div v-else-if="type === 'C'">
+        C
+    </div>
+    <div v-else>
+        Not A/B/C is {{ type }}
+    </div>
+</div>
+<script>
+    const div2 = new Vue({
+        el: '#div2',
+        data: {
+            type: 'A'
+        }
+    })
+</script>
+</body>
+</html>
