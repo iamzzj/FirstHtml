@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <title>test1</title>
@@ -6,7 +7,7 @@
 </head>
 <body>
 <span id="span1" v-once>Message: {{msg}}</span>
-<p id="p1">Using v-html directive: <span v-html="rawHtml"></span> </p>
+<p id="p1">Using v-html directive: <span v-html="rawHtml"></span></p>
 <script>
     const span1 = new Vue({
         el: '#span1',
@@ -19,10 +20,11 @@
 
     const p1 = new Vue({
         el: '#p1',
-        data:{
+        data: {
             rawHtml: '<span style=\'color:red\'>This should be red.</span>'
         }
     })
 </script>
 
 </body>
+</html>
