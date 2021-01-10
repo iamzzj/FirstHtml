@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test5</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+<div id="div5">
+    <select v-model="selected">
+        <option disabled value="">请选择</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+    </select>
+    <span>Selected: {{ selected }}</span>
+</div>
+<script>
+    const div5 = new Vue({
+        el: '#div5',
+        data: {
+            selected: 'A'
+        }
+    })
+</script>
+</body>
+</html>

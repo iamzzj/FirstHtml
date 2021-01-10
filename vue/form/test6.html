@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test6</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+<div id="div6">
+    <select v-model="selected">
+        <option v-for="opition in opitions" v-bind:value="opition.value">
+            {{ opition.text }}
+        </option>
+    </select>
+    <br>
+    <span>Selected: {{ selected }}</span>
+</div>
+<script>
+    const div6 = new Vue({
+        el: '#div6',
+        data: {
+            selected: 'b',
+            opitions: [
+                {
+                    value: 'a',
+                    text: 'A'
+                },
+                {
+                    value: 'b',
+                    text: 'B'
+                },
+                {
+                    value: 'c',
+                    text: 'C'
+                },
+            ]
+        }
+    })
+</script>
+</body>
+</html>
