@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test1</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+<div id="div1">
+    <span>Multiline message is:</span>
+    <p style="white-space:  pre-line;">{{ message }}</p>
+    <br>
+    <textarea style="height: 100px" v-model="message" placeholder="add multiline"></textarea>
+</div>
+<script>
+    var div1 = new Vue({
+        el: '#div1',
+        data: {
+            message: ''
+        }
+    })
+</script>
+</body>
+</html>
