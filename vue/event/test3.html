@@ -7,14 +7,17 @@
 </head>
 <body>
 <div id="div3">
-    <button v-on:click="say('hi')">Say hi</button>
-    <button v-on:click="say('what')">Say what</button>
+    <button v-on:click="say('hi', $event)">Say hi</button>
+    <button v-on:click="say('what', $event)">Say what</button>
 </div>
 <script>
     const div3 = new Vue({
         el: '#div3',
         methods: {
-            say: function (message) {
+            say: function (message, event) {
+                if (event) {
+                    event.preventDefault()
+                }
                 alert(message)
             }
         }
