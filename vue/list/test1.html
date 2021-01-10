@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>test1</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+<ul id="example-1">
+    <li v-for="(item, index) in items" :key="item.message">
+        {{ parentMessage }} + {{ index }} + {{ item.message }}
+    </li>
+</ul>
+<script>
+    const  example1 = new Vue({
+        el: '#example-1',
+        data: {
+            parentMessage: 'parent',
+            items: [
+                {message: 'First'},
+                {message: 'Second'}
+            ]
+        }
+    })
+</script>
+</body>

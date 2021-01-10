@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test2</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+<ul id="v-for-object">
+    <li v-for="(value, name, index) of objects">
+        {{ index }} . {{ name }} : {{ value }}
+    </li>
+</ul>
+<script>
+    const ul2 = new Vue({
+        el: '#v-for-object',
+        data: {
+            objects: {
+                title: 'How to do lists in Vue',
+                author: 'Jane Doe',
+                publishedAt: '2016-04-10'
+            }
+        }
+    })
+</script>
+</body>
+</html>
