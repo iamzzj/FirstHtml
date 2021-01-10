@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test2</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+<div id="div2">
+    <p>message is {{ message }}</p>
+    <input v-model="message">
+    <button v-on:click="greet">Greet</button>
+</div>
+<script>
+    const div2 = new Vue({
+        el: '#div2',
+        data: {
+            message: ''
+        },
+        methods: {
+            greet: function (event) {
+                alert('Hello  ' + this.message + '!')
+                if (event) {
+                    alert(event.target.tagName)
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

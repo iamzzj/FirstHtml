@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>test1</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+<div id="div1">
+    <button v-on:click="count += 1">Add</button>
+    <p>count is {{ count }}</p>
+</div>
+<script>
+    const div1 = new Vue({
+        el: '#div1',
+        data: {
+            count: 1
+        }
+    })
+</script>
+</body>
