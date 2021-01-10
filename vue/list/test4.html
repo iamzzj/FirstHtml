@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test4</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+<div id="ul4" >
+    <ul v-for="set in sets">
+        <li v-for="n in even(set)">{{ n }}</li>
+    </ul>
+</div>
+<script>
+    const ul4 = new Vue({
+        el: '#ul4',
+        data: {
+            sets: [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]]
+        },
+        methods: {
+            even: function (numbers) {
+                return numbers.filter(function (number) {
+                    return number % 2 === 0
+                })
+            }
+        }
+    })
+</script>
+</body>
+</html>
