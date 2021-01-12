@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test2</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+<div id="div2">
+    <blog-prop
+            v-bind:title="post.title"
+    ></blog-prop>
+</div>
+<script>
+    Vue.component('blog-prop', {
+        props: {
+            title: String,
+            likes: Number,
+            isPublished: Boolean,
+            commentIds: Array,
+            author: Object,
+            callback: Function
+        },
+        template: '<h3>{{ title }}</h3>'
+    })
+    new Vue({
+        el: '#div2',
+        data: {
+            post: {
+                title: 'Hello World!'
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>test1</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+<div id="div1">
+    <blog-post
+            post-title="Hello World!"
+    ></blog-post>
+</div>
+<script>
+    Vue.component('blog-post', {
+        props: ['postTitle'],
+        template: '\
+        <h3>{{ postTitle }}</h3>\
+        '
+    })
+    new Vue({
+        el: '#div1'
+    })
+</script>
+</body>
+</html>
