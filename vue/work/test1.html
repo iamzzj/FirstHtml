@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>test1</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+<div id="app" style="text-align: center">
+    <h1>{{ title }}</h1>
+    <ul style="margin: 0 auto;width: 300px">
+        <li v-for="good in goods">
+            <span> {{ good.name }}</span>
+            <a v-bind:href="good.url">{{good.urlName}}</a>
+        </li>
+    </ul>
+</div>
+
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            title: '列表',
+            goods: [
+                {
+                    name: 'good1',
+                    url: 'http://qq.com/',
+                    urlName: '腾讯'
+                },
+                {name: 'good2'},
+                {name: 'good3'}
+            ]
+        }
+    })
+</script>
+</body>
+<html>
